@@ -8,7 +8,7 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
-#if defined(BUILD_QRENCODER_TESTS)
+#if defined(WITH_TESTS)
 #   define __STATIC 
 #else
 #   define __STATIC static

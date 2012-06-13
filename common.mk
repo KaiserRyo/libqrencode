@@ -17,8 +17,9 @@ include $(MKFILES_ROOT)/qmacros.mk
 #===== INSTALL_DIRECTORY - Base directory where builder installs result binary files.
 INSTALLDIR=lib
 
-# Append flags from the command-line
-CCFLAGS += $(QRENCODER_CCFLAGS)
+ifeq ($(TEST),yes)
+	CCFLAGS += -DWITH_TESTS
+endif
 
 define PINFO
 PINFO name=QREncoder
